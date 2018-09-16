@@ -1,0 +1,4 @@
+<p>An Index Page</p>
+<% @users.each do |user| %>
+  <li><%= user.id %> - <%= user.username %> p: <%=user.password %></li>
+<% end %>
