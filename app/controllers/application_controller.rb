@@ -1,4 +1,5 @@
 require './config/environment'
+require 'pry'
 
 class ApplicationController < Sinatra::Base
 
@@ -17,6 +18,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/signup' do
+    binding.pry
     if params[:user][:username] == "" || params[:user][:password] == "" || params[:user][:email] == ""
       redirect to "/signup"
     else
