@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
 
   post '/signup' do
     binding.pry
-    if params[:user][:username] == "" || params[:user][:password] == "" || params[:user][:email] == ""
+    if params[:username] == "" || params[:password] == "" || params[:email] == ""
       redirect to "/signup"
     else
       user = User.create(params[:user])
